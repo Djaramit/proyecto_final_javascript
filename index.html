@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles.css">
+    <title>Registro e Inicio de Sesión</title>
+</head>
+<body>
+    <div class="container">
+        <h2 id="formTitle">Iniciar Sesión</h2>
+        <div id="errorMessage"></div>
+        <form id="loginForm">
+            <label for="loginUsername">Usuario</label>
+            <input type="text" id="loginUsername" required>
+            <label for="loginPassword">Contraseña</label>
+            <input type="password" id="loginPassword" required>
+            <button type="button" onclick="loginUser()">Iniciar Sesión</button>
+            <p>¿No tienes cuenta? <a href="#" onclick="showRegisterForm()">Regístrate</a></p>
+        </form>
+
+        <form id="registerForm" style="display:none;">
+            <h2 id="registerTitle">Registro</h2>
+            <label for="registerUsername">Usuario</label>
+            <input type="text" id="registerUsername" required>
+            <label for="registerEmail">Correo Electrónico</label>
+            <input type="email" id="registerEmail" required>
+            <label for="registerPhone">Teléfono</label>
+            <input type="tel" id="registerPhone" required>
+            <label for="registerPassword">Contraseña</label>
+            <input type="password" id="registerPassword" required>
+            <button type="button" onclick="registerUser()">Registrarse</button>
+            <p>¿Ya tienes cuenta? <a href="#" onclick="showLoginForm()">Iniciar Sesión</a></p>
+        </form>
+    </div>
+
+    <div id="gallerySection" style="display:none;">
+        <input type="text" id="searchInput" placeholder="Buscar imágenes...">
+        <button onclick="searchImages()">Buscar</button>
+        <div id="gallery"></div>
+    </div>
+    
+
+    <script src="/script.js"></script>
+</body>
+</html>
+
